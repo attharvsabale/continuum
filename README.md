@@ -6,7 +6,7 @@ Continuum is an adaptive tutoring concept built around a persistent memory engin
 
 🔗 **Live demo:** [continuum-eta-eight.vercel.app](https://continuum-eta-eight.vercel.app/)
 
-> **Note:** This repo is the **frontend only** — a design/UX showcase for the full-stack project. It runs on mocked data so you can see the product experience end to end without a backend running. For the full-stack version (FastAPI + Cognee memory service), check the repo of the same name under [DATBOI-MAYANK/Continuum](https://github.com/DATBOI-MAYANK/Continuum).
+> **Note:** This repo is the **frontend only** — a design/UX showcase for the full-stack project. It runs on mocked data so you can see the product experience end to end without a backend running. For the full-stack version (FastAPI + Cognee memory service), check the repo of the same name in my repos.
 
 ## What's in the demo
 
