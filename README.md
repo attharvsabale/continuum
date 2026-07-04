@@ -1,16 +1,40 @@
-# React + Vite
+# Continuum
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**A tutor that never forgets.**
 
-Currently, two official plugins are available:
+Continuum is an adaptive tutoring concept built around a persistent memory engine — it remembers every session, adapts its teaching strategy to how each student learns, tracks mastery per concept, and quietly prunes misconceptions once they're resolved, so nothing is ever explained twice.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live demo:** [continuum-eta-eight.vercel.app](https://continuum-eta-eight.vercel.app/)
 
-## React Compiler
+> **Note:** This repo is the **frontend only** — a design/UX showcase for the full-stack project. It runs on mocked data so you can see the product experience end to end without a backend running. For the full-stack version (FastAPI + Cognee memory service), check the repo of the same name under [DATBOI-MAYANK/Continuum](https://github.com/DATBOI-MAYANK/Continuum).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What's in the demo
 
-## Expanding the Oxlint configuration
+- **Landing page** — hero, adaptive learning scroll section, memory lifecycle, tech overview
+- **`/login`, `/signup`** — split-screen auth flow with a dithered photo panel
+- **`/adaptive-learning`, `/for-students`** — long-form editorial content pages
+- **`/app`** — the actual product: a tutoring chat interface with
+  - Live `recall()` / `remember()` / `improve()` / `forget()` memory-lifecycle events surfaced inline as the conversation happens
+  - A mastery map, strategy performance panel, and misconception tracker
+  - A collapsible dashboard that becomes a slide-in drawer on mobile
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech stack
+
+React 19 · Vite · React Router · GSAP (ScrollTrigger, SplitText) · Lenis smooth scroll
+
+## Running it locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Project structure
+
+```
+src/
+  components/   shared UI (Nav, Footer, TextPage, auth icons, etc.)
+  pages/        routed pages (Home, Login, SignUp, Session, ...)
+  sections/     landing-page sections (Hero, AdaptiveLearning, ...)
+  lib/          smooth-scroll setup
+```
